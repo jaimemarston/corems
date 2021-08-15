@@ -1,0 +1,28 @@
+{% extends 'contabilidad/base.html' %}
+
+{% block content %}
+
+
+<table id="example" class="display nowrap" style="width:50%">
+	<thead>
+  <tr>
+    <th>Codigo</th>
+    <th>Nombre</th>
+
+  </tr>
+</thead>
+<tbody>
+  {% for object in object_list %}
+  <tr>
+    <td>{{ object.codigo }}</td>
+    <td> <a href="" style="color:#000000;">{{ object.nombre }}</td>
+  </tr>
+  {% empty %}
+    <li>No objects yet.</li>
+  {% endfor %}
+    
+ <tbody>
+</table>
+
+
+{% endblock %}

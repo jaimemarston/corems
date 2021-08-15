@@ -1,0 +1,118 @@
+{% load static %}
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/scroller/2.0.4/css/scroller.dataTables.min.css">
+        
+        <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+        <script src="https://cdn.datatables.net/scroller/2.0.4/js/dataTables.scroller.min.js"></script>
+
+
+
+
+        <script>
+   // https://datatables.net/extensions/scroller/examples/initialisation/simple.html
+
+                $(document).ready(function() {
+                        $('#example').DataTable( {
+                            deferRender:    true,
+                            scrollY:        400,
+                            scrollCollapse: true,
+                            scroller:       true,
+                            fixedColumns: true
+                        } );
+                    } );
+    
+        </script>
+       
+    <nav>
+        <ul>
+            <li><a href="#">Thing</a></li>
+            <li><a href="#">Other</a></li>
+        </ul>
+    </nav>
+
+    </head>
+
+
+
+
+     <body>
+    <div id="colbox">
+            <div id="main">
+                <h3>Plan de Cuentas</h3>
+                    {% block content %}
+                    {% endblock %}
+            </div>
+
+            <aside>
+                <p>
+                izquierdo
+                </p>
+            </aside>
+
+    </div>
+    <footer>
+        Marston Software
+    </footer>
+
+   
+    </body>
+   
+
+</html>
+
+
+
+<style>
+#container {
+    margin: 0;
+    background: #fff;
+}
+header {
+    background: #ccc;
+    padding: 10px;
+}
+header h1 { margin: 0; }
+
+nav {
+    background: #c99;
+}
+
+#colbox {
+    position: relative;
+    clear: both;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+#main {
+    background: #fff;
+    width: 30%;
+    height: 85%;
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    overflow: hidden;
+
+ }
+
+aside {
+    background: #ffc;
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    overflow: hidden;
+    height: 85%;
+    width: 70%;
+}
+
+footer {
+    background: #cc9;
+    clear: both;
+}
+</style>
